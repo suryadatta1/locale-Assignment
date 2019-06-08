@@ -1,0 +1,16 @@
+{
+  "name": "parse_csv",
+  "version": "1.0.0",
+  "description": "parsing csv files and storing into database",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Surya Datta",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fast-csv": "^2.5.0",
+    "pg": "^7.11.0"
+  }
+}
