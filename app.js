@@ -1,6 +1,8 @@
 const express = require("express");
 const csv = require("fast-csv");
 const pool = require("./pgdb");
+const posts = require('./routes/api');
+
 const app = express();
 
 pool.connect(function(err) {
@@ -81,6 +83,7 @@ let csvStream = csv
     console.log(err);
   });
 const port = process.env.PORT || 5000;
+app.use('/data',posts)
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
